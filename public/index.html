@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JPG/PNG → WebP 图片转换工具</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 头部 -->
+    <header class="header">
+      <h1>🖼️ JPG/PNG → WebP 图片转换工具</h1>
+      <p class="subtitle">本地图片格式转换，压缩体积，提升网站加载速度</p>
+    </header>
+
+    <!-- 拖拽上传区 -->
+    <div class="drop-zone" id="dropZone">
+      <div class="drop-zone-content">
+        <span class="drop-icon">📤</span>
+        <p>拖拽图片到此处，或 <span class="browse-link">点击选择文件</span></p>
+        <p class="drop-hint">支持 JPG、PNG 格式 | 单次最多 20 张</p>
+      </div>
+      <input type="file" id="fileInput" multiple accept="image/jpeg,image/png" hidden>
+    </div>
+
+    <!-- 设置栏 -->
+    <div class="settings-bar">
+      <div class="quality-setting">
+        <label for="qualitySlider">质量：</label>
+        <input type="range" id="qualitySlider" min="10" max="100" value="80" step="1">
+        <span class="quality-value" id="qualityValue">80</span>
+      </div>
+      <div class="quality-presets">
+        <button class="preset-btn" data-quality="60">快速 60</button>
+        <button class="preset-btn active" data-quality="80">标准 80</button>
+        <button class="preset-btn" data-quality="95">高清 95</button>
+      </div>
+      <label class="lossless-label">
+        <input type="checkbox" id="losslessCheck">
+        无损模式（PNG 推荐）
+      </label>
+      <div class="action-buttons">
+        <button class="btn btn-secondary" id="clearBtn">清空列表</button>
+        <button class="btn btn-primary" id="convertBtn" disabled>开始转换</button>
+      </div>
+    </div>
+
+    <!-- 文件列表 -->
+    <div class="file-list-section" id="fileListSection" style="display:none;">
+      <h2>文件列表（<span id="fileCount">0</span> 个文件）</h2>
+      <div class="table-wrapper">
+        <table class="file-table">
+          <thead>
+            <tr>
+              <th class="col-preview">预览</th>
+              <th class="col-name">文件名</th>
+              <th class="col-size">原大小</th>
+              <th class="col-converted">转换后</th>
+              <th class="col-action">操作</th>
+            </tr>
+          </thead>
+          <tbody id="fileTableBody"></tbody>
+        </table>
+      </div>
+      <div class="batch-download" id="batchDownloadArea" style="display:none;">
+        <button class="btn btn-download" id="downloadAllBtn">⬇ 全部下载（ZIP）</button>
+      </div>
+    </div>
+
+    <!-- 统计栏 -->
+    <div class="stats-bar" id="statsBar" style="display:none;">
+      <div class="stats-summary">
+        <span class="stat-item">📊 <span id="totalFiles">0</span> 个文件</span>
+        <span class="stat-divider">|</span>
+        <span class="stat-item stat-success">✅ 成功 <span id="successCount">0</span></span>
+        <span class="stat-item stat-fail">❌ 失败 <span id="failCount">0</span></span>
+      </div>
+      <div class="stats-size" id="statsSize"></div>
+      <button class="btn btn-small btn-copy" id="copyStatsBtn">📋 复制统计</button>
+    </div>
+  </div>
+
+  <!-- 图片预览模态框 -->
+  <div class="modal-overlay" id="previewModal" style="display:none;">
+    <div class="modal-content">
+      <span class="modal-close" id="modalClose">&times;</span>
+      <h3 id="modalTitle"></h3>
+      <div class="comparison">
+        <div class="comparison-item">
+          <h4>原始图片</h4>
+          <img id="previewOriginal" alt="原始图片">
+          <p class="comparison-size" id="previewOriginalSize"></p>
+        </div>
+        <div class="comparison-arrow">→</div>
+        <div class="comparison-item">
+          <h4>WebP 转换后</h4>
+          <img id="previewConverted" alt="转换后">
+          <p class="comparison-size" id="previewConvertedSize"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 通知提示 -->
+  <div class="toast" id="toast" style="display:none;"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
