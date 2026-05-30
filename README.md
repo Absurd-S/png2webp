@@ -26,7 +26,7 @@
 ## 快速开始
 
 ```bash
-git clone https://github.com/你的用户名/jpg2webp.git
+git clone https://github.com/Absurd-S/png2webp.git
 cd jpg2webp
 npm install        # 安装依赖（含 Sharp 原生二进制）
 npm start          # 启动服务，默认 http://localhost:3000
@@ -52,8 +52,7 @@ PORT=8080 npm start
 
 ## 页面截图
 
-<!-- 启动服务后截图拖到这里 -->
-<!-- ![screenshot](https://user-images.githubusercontent.com/...) -->
+![screenshot](./src/screenshot.png)
 
 ## API 接口
 
@@ -172,10 +171,10 @@ jpg2webp/
 
 ## 开源许可
 
-MIT © AbsurdStone
+MIT © Absurd-S
 
 ---
 
 <p align="center">
-  <sub>Built with Node.js + Express + Sharp. Design inspired by warm minimalism.</sub>
+  <sub>Built with Node.js + Express + Sharp. Design inspired by Anthropic.</sub>
 </p>

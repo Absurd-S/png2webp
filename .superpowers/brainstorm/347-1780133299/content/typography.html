@@ -1,0 +1,47 @@
+<h2>字体方案对比</h2>
+<p class="subtitle">DESIGN.md 的衬线标题 + 无衬线正文在工具页上的效果</p>
+
+<div class="options" data-multiselect>
+  <div class="option" data-choice="google-fonts" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Google Fonts 加载（推荐）</h3>
+      <p>Cormorant Garamond（衬线标题）+ Inter（无衬线正文）</p>
+      <p style="font-size:13px;color:#888;">从 Google Fonts CDN 加载，有外部依赖但视觉还原度高</p>
+    </div>
+  </div>
+  <div class="option" data-choice="system-fonts" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>系统字体降级</h3>
+      <p>Georgia（衬线标题）+ system-ui（无衬线正文）</p>
+      <p style="font-size:13px;color:#888;">无外部依赖，离线可用，但品牌感较弱</p>
+    </div>
+  </div>
+</div>
+
+<h3 style="margin-top:48px;">字体预览</h3>
+
+<div class="split">
+  <div class="mockup">
+    <div class="mockup-header">方案 A：Google Fonts</div>
+    <div class="mockup-body">
+      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+      <h4 style='font-family:"Cormorant Garamond",serif;font-size:36px;font-weight:400;letter-spacing:-0.5px;margin:0 0 8px;color:#faf9f5;'>JPG/PNG → WebP</h4>
+      <p style='font-family:Inter,sans-serif;font-size:14px;font-weight:400;color:#a09d96;margin:0 0 20px;'>本地图片格式转换工具</p>
+      <div style='font-family:Inter,sans-serif;font-size:14px;font-weight:500;color:#faf9f5;margin-bottom:8px;'>质量设置 · 80%</div>
+      <div style='font-family:"Cormorant Garamond",serif;font-size:24px;font-weight:400;letter-spacing:-0.3px;color:#faf9f5;margin-bottom:8px;'>文件列表</div>
+      <p style='font-family:Inter,sans-serif;font-size:13px;color:#a09d96;margin:0;'>photo-001.jpg · 2.4 MB · 已转换</p>
+    </div>
+  </div>
+  <div class="mockup">
+    <div class="mockup-header">方案 B：系统字体</div>
+    <div class="mockup-body">
+      <h4 style='font-family:Georgia,"Times New Roman",serif;font-size:36px;font-weight:400;letter-spacing:-0.5px;margin:0 0 8px;color:#faf9f5;'>JPG/PNG → WebP</h4>
+      <p style='font-family:system-ui,-apple-system,sans-serif;font-size:14px;font-weight:400;color:#a09d96;margin:0 0 20px;'>本地图片格式转换工具</p>
+      <div style='font-family:system-ui,-apple-system,sans-serif;font-size:14px;font-weight:500;color:#faf9f5;margin-bottom:8px;'>质量设置 · 80%</div>
+      <div style='font-family:Georgia,"Times New Roman",serif;font-size:24px;font-weight:400;letter-spacing:-0.3px;color:#faf9f5;margin-bottom:8px;'>文件列表</div>
+      <p style='font-family:system-ui,-apple-system,sans-serif;font-size:13px;color:#a09d96;margin:0;'>photo-001.jpg · 2.4 MB · 已转换</p>
+    </div>
+  </div>
+</div>

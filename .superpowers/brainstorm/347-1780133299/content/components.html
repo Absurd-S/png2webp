@@ -1,0 +1,77 @@
+<h2>组件规格</h2>
+<p class="subtitle">各功能组件的 DESIGN.md 映射</p>
+
+<div style="background:#faf9f5;border-radius:12px;padding:32px;border:1px solid #e6dfd8;margin-bottom:24px;">
+  <!-- Updated Header -->
+  <div style="text-align:center;padding:32px 0;">
+    <h2 style='font-family:"Cormorant Garamond",serif;font-size:36px;font-weight:400;letter-spacing:-0.5px;color:#141413;margin:0 0 6px;'>JPG/PNG → WebP 转换工坊</h2>
+    <p style="font-family:Inter,sans-serif;font-size:16px;color:#6c6a64;margin:0;">本地图片格式转换，压缩体积，提升网站加载速度</p>
+  </div>
+</div>
+
+<h3 style="margin-top:32px;">组件清单</h3>
+
+<div class="cards">
+  <div class="card" data-choice="upload" onclick="toggleSelect(this)">
+    <div class="card-body">
+      <h3>📤 拖拽上传区</h3>
+      <p>映射 DESIGN.md <code>feature-card</code> 内嵌拖拽区</p>
+      <p style="font-size:13px;color:#8e8b82;">虚线边框 #e6dfd8，hover 变珊瑚色，微上浮动效</p>
+    </div>
+  </div>
+  <div class="card" data-choice="settings" onclick="toggleSelect(this)">
+    <div class="card-body">
+      <h3>⚙️ 设置栏</h3>
+      <p>映射 DESIGN.md <code>text-input</code> + <code>category-tab</code> + <code>button-primary</code></p>
+      <p style="font-size:13px;color:#8e8b82;">Range 滑块 accent-color: 珊瑚色 · 预设胶囊按钮 · 珊瑚主按钮</p>
+    </div>
+  </div>
+  <div class="card" data-choice="table" onclick="toggleSelect(this)">
+    <div class="card-body">
+      <h3>📋 文件列表</h3>
+      <p>白色卡片内嵌表格 · 映射 DESIGN.md 表格样式</p>
+      <p style="font-size:13px;color:#8e8b82;">caption-uppercase 表头 · badge-pill 状态标记 · 单文件下载链接</p>
+    </div>
+  </div>
+  <div class="card" data-choice="stats" onclick="toggleSelect(this)">
+    <div class="card-body">
+      <h3>📊 统计栏</h3>
+      <p>白色卡片 · 转换结果汇总</p>
+      <p style="font-size:13px;color:#8e8b82;">成功/失败计数 · 节省百分比高亮 · 复制统计按钮</p>
+    </div>
+  </div>
+  <div class="card" data-choice="modal" onclick="toggleSelect(this)">
+    <div class="card-body">
+      <h3>🔍 预览模态框</h3>
+      <p>奶油色遮罩 · 白色卡片弹窗</p>
+      <p style="font-size:13px;color:#8e8b82;">原图 vs WebP 左右对比 · 文件大小标注</p>
+    </div>
+  </div>
+  <div class="card" data-choice="toast" onclick="toggleSelect(this)">
+    <div class="card-body">
+      <h3>🔔 Toast 通知</h3>
+      <p>顶部居中浮层 · 映射 DESIGN.md 语义色</p>
+      <p style="font-size:13px;color:#8e8b82;">success #5db872 · error #c64545 · info 奶油色</p>
+    </div>
+  </div>
+</div>
+
+<h3 style="margin-top:32px;">状态标记</h3>
+<div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-family:Inter,sans-serif;">
+  <span style="display:inline-block;padding:2px 12px;border-radius:9999px;font-size:12px;font-weight:500;background:#f5f0e8;color:#8e8b82;">等待中</span>
+  <span style="display:inline-block;padding:2px 12px;border-radius:9999px;font-size:12px;font-weight:500;background:#fff3e0;color:#e67e22;">转换中...</span>
+  <span style="display:inline-block;padding:2px 12px;border-radius:9999px;font-size:12px;font-weight:500;background:#e8f5e9;color:#388e3c;">已完成</span>
+  <span style="display:inline-block;padding:2px 12px;border-radius:9999px;font-size:12px;font-weight:500;background:#fdecea;color:#c64545;">失败</span>
+</div>
+<p style="font-size:13px;color:#8e8b82;margin-top:8px;">映射 DESIGN.md <code>badge-pill</code> 组件：rounded: pill (9999px) · typography: caption (13px/500) · padding: 2px 12px</p>
+
+<h3 style="margin-top:32px;">间距规则</h3>
+<table style="width:100%;border-collapse:collapse;font-family:Inter,sans-serif;font-size:14px;">
+  <thead><tr style="border-bottom:1px solid #e6dfd8;"><th style="text-align:left;padding:8px 12px;color:#8e8b82;font-weight:500;">间距 Token</th><th style="text-align:left;padding:8px 12px;color:#8e8b82;font-weight:500;">值</th><th style="text-align:left;padding:8px 12px;color:#8e8b82;font-weight:500;">用途</th></tr></thead>
+  <tbody>
+    <tr style="border-bottom:1px solid #ebe6df;"><td style="padding:8px 12px;"><code>lg</code></td><td style="padding:8px 12px;">24px</td><td style="padding:8px 12px;">卡片之间的间距</td></tr>
+    <tr style="border-bottom:1px solid #ebe6df;"><td style="padding:8px 12px;"><code>xl</code></td><td style="padding:8px 12px;">32px</td><td style="padding:8px 12px;">卡片内边距</td></tr>
+    <tr style="border-bottom:1px solid #ebe6df;"><td style="padding:8px 12px;"><code>xxl</code></td><td style="padding:8px 12px;">48px</td><td style="padding:8px 12px;">Header 上下边距</td></tr>
+    <tr><td style="padding:8px 12px;"><code>section</code></td><td style="padding:8px 12px;">96px</td><td style="padding:8px 12px;">页面整体上下留白</td></tr>
+  </tbody>
+</table>

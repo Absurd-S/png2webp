@@ -26,7 +26,7 @@
 ## Quick Start
 
 ```bash
-git clone https://github.com/your-username/jpg2webp.git
+git clone https://github.com/Absurd-S/png2webp.git
 cd jpg2webp
 npm install        # Install dependencies (includes Sharp native binaries)
 npm start          # Start server at http://localhost:3000
@@ -52,8 +52,7 @@ PORT=8080 npm start
 
 ## Screenshots
 
-<!-- Take screenshots after launching the server -->
-<!-- ![screenshot](https://user-images.githubusercontent.com/...) -->
+![screenshot](./src/screenshot.png)
 
 ## API
 
@@ -172,10 +171,10 @@ jpg2webp/
 
 ## License
 
-MIT © AbsurdStone
+MIT © Absurd-S
 
 ---
 
 <p align="center">
-  <sub>Built with Node.js + Express + Sharp. Design inspired by warm minimalism.</sub>
+  <sub>Built with Node.js + Express + Sharp. Design inspired by Anthropic.</sub>
 </p>

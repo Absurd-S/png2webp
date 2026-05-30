@@ -3,29 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JPG/PNG → WebP 图片转换工具</title>
+  <title>JPG/PNG → WebP 转换工坊</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="container">
     <!-- 头部 -->
     <header class="header">
-      <h1>🖼️ JPG/PNG → WebP 图片转换工具</h1>
+      <h1>JPG/PNG → WebP 转换工坊</h1>
       <p class="subtitle">本地图片格式转换，压缩体积，提升网站加载速度</p>
     </header>
 
     <!-- 拖拽上传区 -->
-    <div class="drop-zone" id="dropZone">
-      <div class="drop-zone-content">
-        <span class="drop-icon">📤</span>
-        <p>拖拽图片到此处，或 <span class="browse-link">点击选择文件</span></p>
-        <p class="drop-hint">支持 JPG、PNG 格式 | 单次最多 20 张</p>
+    <div class="card">
+      <div class="drop-zone" id="dropZone">
+        <div class="drop-zone-content">
+          <span class="drop-icon">📤</span>
+          <p>拖拽图片到此处，或 <span class="browse-link">点击选择文件</span></p>
+          <p class="drop-hint">支持 JPG、PNG 格式 · 单次最多 20 张</p>
+        </div>
+        <input type="file" id="fileInput" multiple accept="image/jpeg,image/png" hidden>
       </div>
-      <input type="file" id="fileInput" multiple accept="image/jpeg,image/png" hidden>
     </div>
 
     <!-- 设置栏 -->
-    <div class="settings-bar">
+    <div class="settings-bar card">
       <div class="quality-setting">
         <label for="qualitySlider">质量：</label>
         <input type="range" id="qualitySlider" min="10" max="100" value="80" step="1">
@@ -47,7 +52,7 @@
     </div>
 
     <!-- 文件列表 -->
-    <div class="file-list-section" id="fileListSection" style="display:none;">
+    <div class="file-list-section card" id="fileListSection" style="display:none;">
       <h2>文件列表（<span id="fileCount">0</span> 个文件）</h2>
       <div class="table-wrapper">
         <table class="file-table">
@@ -69,7 +74,7 @@
     </div>
 
     <!-- 统计栏 -->
-    <div class="stats-bar" id="statsBar" style="display:none;">
+    <div class="stats-bar card" id="statsBar" style="display:none;">
       <div class="stats-summary">
         <span class="stat-item">📊 <span id="totalFiles">0</span> 个文件</span>
         <span class="stat-divider">|</span>
