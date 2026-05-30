@@ -1,8 +1,0 @@
-{"type":"click","text":"📤 拖拽上传区\n      映射 DESIGN.md feature-card 内嵌拖拽区\n      虚线边框 #e6dfd8，hover 变珊瑚色，微上浮动效","choice":"upload","id":null,"timestamp":1780133769294}
-{"type":"click","text":"⚙️ 设置栏\n      映射 DESIGN.md text-input + category-tab + button-primary\n      Range 滑块 accent-color: 珊瑚色 · 预设胶囊按钮 · 珊瑚主按钮","choice":"settings","id":null,"timestamp":1780133769941}
-{"type":"click","text":"📋 文件列表\n      白色卡片内嵌表格 · 映射 DESIGN.md 表格样式\n      caption-uppercase 表头 · badge-pill 状态标记 · 单文件下载链接","choice":"table","id":null,"timestamp":1780133770404}
-{"type":"click","text":"📊 统计栏\n      白色卡片 · 转换结果汇总\n      成功/失败计数 · 节省百分比高亮 · 复制统计按钮","choice":"stats","id":null,"timestamp":1780133770784}
-{"type":"click","text":"🔍 预览模态框\n      奶油色遮罩 · 白色卡片弹窗\n      原图 vs WebP 左右对比 · 文件大小标注","choice":"modal","id":null,"timestamp":1780133771153}
-{"type":"click","text":"🔔 Toast 通知\n      顶部居中浮层 · 映射 DESIGN.md 语义色\n      success #5db872 · error #c64545 · info 奶油色","choice":"toast","id":null,"timestamp":1780133771956}
-{"type":"click","text":"🔍 预览模态框\n      奶油色遮罩 · 白色卡片弹窗\n      原图 vs WebP 左右对比 · 文件大小标注","choice":"modal","id":null,"timestamp":1780133773149}
-{"type":"click","text":"🔔 Toast 通知\n      顶部居中浮层 · 映射 DESIGN.md 语义色\n      success #5db872 · error #c64545 · info 奶油色","choice":"toast","id":null,"timestamp":1780133774271}
